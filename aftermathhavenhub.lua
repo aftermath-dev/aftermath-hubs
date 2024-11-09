@@ -199,8 +199,3 @@ close.TextSize = 14.000
 close.MouseButton1Down:connect(function()
 frame.visible = false
 end)
-
-game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "AFTERMATHHAVEN HUB V1";
-        Text = "t.me/aftermathscript";
-        Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
