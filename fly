@@ -147,20 +147,20 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 nowe = false
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "FLY GUI";
-	Text = "by Liver zMods";
+	Title = "FLY GUI MOD";
+	Text = "by AFTERMATH";
 	Icon = "rbxthumb://type=Asset&id=11935868660&w=150&h=150"})
 Duration = 15;
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "GUI OPEN";
-	Text = "Gui Fly пёЋпёЋвњ…";
+	Title = "FLY GUI V3 MOD";
+	Text = "Gui Fly для антиодеров";
 	Icon = "rbxthumb://type=Asset&id=11935883214&w=150&h=150"})
 Duration = 10;
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "By Liver zMods";
-	Text = "created by Brasileiro!";
+	Title = "By Aftermath";
+	Text = "created by AntiOder!";
 	Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
 Duration = 30;
 
