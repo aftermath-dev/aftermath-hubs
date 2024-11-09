@@ -37,7 +37,7 @@ up.Parent = Frame
 up.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 up.Size = UDim2.new(0, 44, 0, 28)
 up.Font = Enum.Font.SourceSans
-up.Text = "в†‘"
+up.Text = "↑"
 up.TextColor3 = Color3.fromRGB(0, 255, 0)
 up.TextSize = 17.000
 
@@ -47,7 +47,7 @@ down.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 down.Position = UDim2.new(0, 0, 0.491228074, 0)
 down.Size = UDim2.new(0, 44, 0, 28)
 down.Font = Enum.Font.SourceSans
-down.Text = "в†“"
+down.Text = "↓"
 down.TextColor3 = Color3.fromRGB(255, 0, 0)
 down.TextSize = 17.000
 
@@ -103,7 +103,7 @@ mine.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)
 mine.Size = UDim2.new(0, 44, 0, 28)
 mine.Font = Enum.Font.SourceSans
-mine.Text = "вЂ”"
+mine.Text = "-"
 mine.TextColor3 = Color3.fromRGB(255, 0, 0)
 mine.TextScaled = true
 mine.TextSize = 14.000
@@ -123,7 +123,7 @@ mini.Parent = main.Frame
 mini.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 mini.Font = "SourceSans"
 mini.Size = UDim2.new(0, 45, 0, 28)
-mini.Text = "вЂ”"
+mini.Text = "_"
 mini.TextSize = 40
 mini.Position = UDim2.new(0, 44, -1, 27)
 
