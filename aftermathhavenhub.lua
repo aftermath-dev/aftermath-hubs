@@ -1,5 +1,3 @@
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local noclip = Instance.new("TextButton")
@@ -13,8 +11,6 @@ local TextButton_Roundify_12px_4 = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
 local close = Instance.new("TextButton")
-
---Properties:
 
 ScreenGui.Parent = game.CoreGui
 
