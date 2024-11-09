@@ -3,5 +3,9 @@ if "you wanna use rochips universal" then
 	local im,lonely,z_c=task.wait,game,loadstring
 	z_c(lonely:HttpGet(z_z..""..z_x))()
 	return ("This will load in about 2 - 30 seconds" or "according to your device and executor")
-
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "By Aftermath";
+	Text = "created by AntiOder!";
+	Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
+Duration = 30;
 end
