@@ -1,13 +1,11 @@
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
 
-
-
 local win = Flux:Window("AntiOder Hub", "t.me/antioderhub", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 
 local tab = win:Tab("Load", "http://www.roblox.com/asset/?id=6023426915")
 
 tab:Label("Select script's language:")
 
-tab:Button("Русский", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderv2ru"))()
+tab:Button("Русский", function()
 
-tab:Button("english", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderv2eng"))()
+tab:Button("english", function()
