@@ -32,9 +32,9 @@ end)
 
 
 
-drops:Button("Add option", function()
+drops:Button("Add option", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhub"))()
 
-drop:Add("Option")
+drop:Add("Russian")
 
 end)
 
