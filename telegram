@@ -1,0 +1,3 @@
+function link(sender)
+shellExecute('https://t.me/Sosuso10')
+end
