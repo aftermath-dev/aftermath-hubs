@@ -1,13 +1,15 @@
 local player = game.Players.LocalPlayer
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "AntiOderHub", HidePremium = false, IntroText = "V1.00", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "AntiOderHub", HidePremium = false, IntroText = " AntiOderHub V1.01", SaveConfig = true, ConfigFolder = "OrionTest"})
 
-local LLLLLLLLTab = Window:MakeTab({ Name = "Description", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+local LLLLLLLLTab = Window:MakeTab({ Name = "Главная", Icon = "rbxassetid://4483345998", PremiumOnly = false })
 
 LLLLLLLLTab:AddParagraph("AftermathStudios","СЛАВА АНТИОДЕРАМ!")
 
 LLLLLLLLTab:AddParagraph("V1.00","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
+
+LLLLLLLLTab:AddButton({ Name = "Вступление в ряды анти одеров в брукхейвене", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/telegram"))() end })
 
 local AATab = Window:MakeTab({ Name = "СКРИПТЫ", Icon = "rbxassetid://4483345998", PremiumOnly = false })
 
@@ -23,5 +25,6 @@ AATab:AddButton({ Name = "Rshade", Callback = function() loadstring(game:HttpGet
 
 AATab:AddButton({ Name = "rochips panel", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rochips-panel-20110"))() end }) 
 
+AATab:AddButton({ Name = "VFLY", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/S33dedL0rdz/-Unknown-Roblox-Vfly-Script-.file/main/Rbxscript.c"))() end })
 
 OrionLib:Init() 
