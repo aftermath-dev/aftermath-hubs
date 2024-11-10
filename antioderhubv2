@@ -64,11 +64,15 @@ end)
 
 local tgls = serv:Channel("Toggles")
 
-tgls:Toggle("No Clip",false, function(bool) loadstring(game:HttpGet("https://pastebin.com/raw/a95RwWVu"))()
+tgls:Toggle("No Clip",true, function(bool) loadstring(game:HttpGet("https://pastebin.com/raw/a95RwWVu"))()
+print(bool)
+tgls:Toggle("No Clip",false, function(bool)
 print(bool)
 end)
 
-tgls:Toggle("ESP",false, function(bool) loadstring(game:HttpGet("https://raw.githubusercontent.com/depthso/Roblox-Extremely-simple-esp/refs/heads/main/esp.lua"))()
+tgls:Toggle("ESP",true, function(bool) loadstring(game:HttpGet("https://raw.githubusercontent.com/depthso/Roblox-Extremely-simple-esp/refs/heads/main/esp.lua"))()
+print(bool)
+tgls:Toggle("ESP",false, function(bool)
 print(bool)
 end)
 
