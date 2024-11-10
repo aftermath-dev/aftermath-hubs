@@ -1,0 +1,30 @@
+local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/aftermath-dev/antioderlib/refs/heads/main/lighttheme')))()
+
+local Window = OrionLib:MakeWindow({Name = "AntiOderHub", HidePremium = false, IntroText = " AntiOderHub V1.01", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local LLLLLLLLTab = Window:MakeTab({ Name = "Главная", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+LLLLLLLLTab:AddParagraph("AftermathStudios","СЛАВА АНТИОДЕРАМ!")
+
+LLLLLLLLTab:AddParagraph("V1.01","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
+
+LLLLLLLLTab:AddParagraph("ВСТУПАЙ В РЯДЫ АНТИ ОДЕРОВ","пиши в телеграм @Sosuso10")
+
+local AATab = Window:MakeTab({ Name = "СКРИПТЫ", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+AATab:AddButton({ Name = "Infinite Yield", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))() end }) 
+
+AATab:AddButton({ Name = "REDZ HUB", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Red-z-hub-9149"))() end })
+
+AATab:AddButton({ Name = "специальный флай для антиодеров", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/fly"))() end })
+
+AATab:AddButton({ Name = "r4d script", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-Script-By-M1zz-11757"))() end }) 
+
+AATab:AddButton({ Name = "Rshade", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-better-shaders-17164"))() end }) 
+
+AATab:AddButton({ Name = "rochips panel", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rochips-panel-20110"))() end }) 
+
+AATab:AddButton({ Name = "VFLY", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/S33dedL0rdz/-Unknown-Roblox-Vfly-Script-.file/main/Rbxscript.c"))() end })
+
+OrionLib:Init() 
