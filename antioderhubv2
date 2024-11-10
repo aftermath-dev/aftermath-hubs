@@ -62,18 +62,16 @@ end)
 
 
 
-local tgls = serv:Channel("Toggles")
+local btns = serv:Channel("Универсал. скрипты")
 
-tgls:Toggle("No Clip",true, function(bool) loadstring(game:HttpGet("https://pastebin.com/raw/a95RwWVu"))()
-print(bool)
-tgls:Toggle("No Clip",false, function(bool)
-print(bool)
+btns:Button("ESP", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Esp-open-source-15582"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
 
-tgls:Toggle("ESP",true, function(bool) loadstring(game:HttpGet("https://raw.githubusercontent.com/depthso/Roblox-Extremely-simple-esp/refs/heads/main/esp.lua"))()
-print(bool)
-tgls:Toggle("ESP",false, function(bool)
-print(bool)
+btns:Seperator()
+
+btns:Button("NoClip", function() loadstring(game:HttpGet("https://pastebin.com/raw/L6Bi4MrA"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
 
 
