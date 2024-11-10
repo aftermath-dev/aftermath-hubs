@@ -1,0 +1,77 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+
+
+local win = DiscordLib:Window("antioderhub")
+
+
+
+local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+
+
+
+local lbls = serv:Channel("Описание")
+
+lbls:Label("Версия скрипта: 2.0.")
+
+lbls:Label("Версия лоадера: 1.0.")
+
+
+
+local btns = serv:Channel("Buttons")
+
+btns:Button("Infinite Yield", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("RedzHub", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Red-z-hub-9149"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("R4D Script", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-Script-By-M1zz-11757"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("Специальный флай для антиодеров", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/fly"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("Rshade", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-better-shaders-17164"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("rochips panel", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rochips-panel-20110"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("Флай на машине (VFly)", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/S33dedL0rdz/-Unknown-Roblox-Vfly-Script-.file/main/Rbxscript.c"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+
+
+local tgls = serv:Channel("Toggles")
+
+tgls:Toggle("No Clip",false, function(bool) loadstring(game:HttpGet("https://pastebin.com/raw/a95RwWVu"))()
+print(bool)
+end)
+
+tgls:Toggle("ESP",false, function(bool) loadstring(game:HttpGet("https://raw.githubusercontent.com/depthso/Roblox-Extremely-simple-esp/refs/heads/main/esp.lua"))()
+print(bool)
+end)
+
+
+
+serv:Channel("by aftermath")
