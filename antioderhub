@@ -7,7 +7,7 @@ local LLLLLLLLTab = Window:MakeTab({ Name = "Главная", Icon = "rbxassetid
 
 LLLLLLLLTab:AddParagraph("AftermathStudios","СЛАВА АНТИОДЕРАМ!")
 
-LLLLLLLLTab:AddParagraph("V1.00","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
+LLLLLLLLTab:AddParagraph("V1.01","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
 
 LLLLLLLLTab:AddButton({ Name = "Вступление в ряды анти одеров в брукхейвене", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/telegram"))() end })
 
