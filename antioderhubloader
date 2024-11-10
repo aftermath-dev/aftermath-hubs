@@ -10,23 +10,19 @@ local serv = win:Server("Loader", "")
 
 
 
-local btns = serv:Channel("Универсал. скрипты")
+local btns = serv:Channel("Main")
 
-btns:Button("ESP", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Esp-open-source-15582"))()
-DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+lbls:Label("Select your language:")
+
+btns:Button("Русский", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubloader"))()
+DiscordLib:Notification("Notification", "Executed!", "Ok!")
 end)
 
 btns:Seperator()
 
 btns:Button("NoClip", function() loadstring(game:HttpGet("https://pastebin.com/raw/L6Bi4MrA"))()
-DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+DiscordLib:Notification("Notification", "Script is not available, legacy AntiOderhub is executed!", "Ok!")
 end) 
-
-
-
-drops:Button("Add option", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubv2"))()
-
-end)
 
 
 
