@@ -10,7 +10,7 @@ local serv = win:Server("Loader", "")
 
 
 
-local btns = serv:Channel("Main")
+local lbls = serv:Channel("Main")
 
 lbls:Label("Select your language:")
 
