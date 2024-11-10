@@ -9,7 +9,7 @@ LLLLLLLLTab:AddParagraph("AftermathStudios","СЛАВА АНТИОДЕРАМ!")
 
 LLLLLLLLTab:AddParagraph("V1.01","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
 
-LLLLLLLLTab:AddButton({ Name = "Вступление в ряды анти одеров в брукхейвене", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/telegram"))() end })
+LLLLLLLLTab:AddParagraph("ВСТУПАЙ В РЯДЫ АНТИ ОДЕРОВ","пиши в телеграм @Sosuso10")
 
 local AATab = Window:MakeTab({ Name = "СКРИПТЫ", Icon = "rbxassetid://4483345998", PremiumOnly = false })
 
