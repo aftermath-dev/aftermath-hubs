@@ -10,7 +10,7 @@ local serv = win:Server("Loader", "")
 
 
 
-local btns = serv:Channel("Main")
+local btns = serv:Channel("Mains")
 
 btns:Button("Русский", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubloader"))()
 DiscordLib:Notification("Notification", "Executed!", "Ok!")
