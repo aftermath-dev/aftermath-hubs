@@ -10,31 +10,21 @@ local serv = win:Server("Loader", "")
 
 
 
-local drops = serv:Channel("Dropdowns")
+local btns = serv:Channel("Универсал. скрипты")
 
-
-
-
-
-local drop = drops:Dropdown("Select your language:",{"Русский","English"}, function(bool)
-
-print(bool)
-
+btns:Button("ESP", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Esp-open-source-15582"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
 
+btns:Seperator()
 
-
-drops:Button("Clear", function()
-
-drop:Clear()
-
-end)
+btns:Button("NoClip", function() loadstring(game:HttpGet("https://pastebin.com/raw/L6Bi4MrA"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end) 
 
 
 
 drops:Button("Add option", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubv2"))()
-
-drop:Add("Russian")
 
 end)
 
