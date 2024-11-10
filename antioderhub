@@ -1,0 +1,27 @@
+local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "AntiOderHub", HidePremium = false, IntroText = "V1.00", SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local LLLLLLLLTab = Window:MakeTab({ Name = "Description", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+LLLLLLLLTab:AddParagraph("AftermathStudios","СЛАВА АНТИОДЕРАМ!")
+
+LLLLLLLLTab:AddParagraph("V1.00","ТГ СОЗДАТЕЛЯ: @aftermathscript.")
+
+local AATab = Window:MakeTab({ Name = "СКРИПТЫ", Icon = "rbxassetid://4483345998", PremiumOnly = false })
+
+AATab:AddButton({ Name = "Infinite Yield", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))() end }) 
+
+AATab:AddButton({ Name = "REDZ HUB", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Red-z-hub-9149"))() end })
+
+AATab:AddButton({ Name = "специальный флай для антиодеров", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/fly"))() end })
+
+AATab:AddButton({ Name = "r4d script", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-Script-By-M1zz-11757"))() end }) 
+
+AATab:AddButton({ Name = "Rshade", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-better-shaders-17164"))() end }) 
+
+AATab:AddButton({ Name = "rochips panel", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Rochips-panel-20110"))() end }) 
+
+
+OrionLib:Init() 
