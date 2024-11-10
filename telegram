@@ -1,3 +1,1 @@
-function link(sender)
-shellExecute('https://t.me/Sosuso10')
-end
+bool result = setClipboardText(https://t.me/Sosuso10)
