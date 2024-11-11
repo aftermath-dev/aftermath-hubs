@@ -12,13 +12,13 @@ local serv = win:Server("Loader", "")
 
 local btns = serv:Channel("Mains")
 
-btns:Button("Русский", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubloader"))()
+btns:Button("Русский", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhubv2"))()
 DiscordLib:Notification("Notification", "Executed!", "Ok!")
 end)
 
 btns:Seperator()
 
-btns:Button("NoClip", function() loadstring(game:HttpGet("https://pastebin.com/raw/L6Bi4MrA"))()
+btns:Button("English", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/antioderhub"))()
 DiscordLib:Notification("Notification", "Script is not available, legacy AntiOderhub is executed!", "Ok!")
 end) 
 
