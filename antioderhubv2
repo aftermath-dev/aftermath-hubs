@@ -16,15 +16,10 @@ lbls:Label("Версия скрипта: 2.0.")
 
 lbls:Label("Версия лоадера: 1.0.")
 
+lbls:Label("Телеграм канал: t.me/antioderhub")
 
 
-local btns = serv:Channel("Buttons")
-
-btns:Button("Infinite Yield", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
-DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
-end)
-
-btns:Seperator()
+local btns = serv:Channel("Brookhaven")
 
 btns:Button("RedzHub", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Red-z-hub-9149"))()
 DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
@@ -33,12 +28,6 @@ end)
 btns:Seperator()
 
 btns:Button("R4D Script", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-Script-By-M1zz-11757"))()
-DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
-end)
-
-btns:Seperator()
-
-btns:Button("Специальный флай для антиодеров", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/fly"))()
 DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
 
@@ -73,6 +62,62 @@ btns:Seperator()
 btns:Button("NoClip", function() loadstring(game:HttpGet("https://pastebin.com/raw/L6Bi4MrA"))()
 DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
+
+btns:Seperator()
+
+btns:Button("Специальный флай для антиодеров", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermath-hubs/refs/heads/main/fly"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+local btns = serv:Channel("Админ скрипты")
+
+btns:Button("Infinite Yield", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("Fates", function() loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+btns:Seperator()
+
+btns:Button("Nameless Admin", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-Admin-6762"))()
+DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
+end)
+
+local lbls = serv:Channel("Лог изменений")
+
+lbls:Label("11.11.2024 - Версия скрипта 2.0, версия лоадера 1.0
+
+lbls:Label("- Изменена библиотека с OrionLib на DiscordLib")
+
+lbls:Label("- Изменен вид меню")
+
+lbls:label("- Добавлен лоадер с возможностью выбрать язык (английский на данный момент не работает)")
+
+lbls:Label("- Перемещены скрипты Infinite Yield и AntiOderFly в новые вкладки")
+
+lbls:Label("- Добавлены новые вкладки Универсал. скрипты, Админ скрипты, вотермарк, и вкладка Другое")
+
+lbls:Label("- Добавлен лог изменений в сам скрипт")
+
+lbls:Label("Создан телеграм канал")
+
+lbls:Label("⠀⠀⠀⠀⠀⠀⠀⠀")
+
+lbls:Label("Следите за новостями в телеграм канале! (он в вкладке другое)")
+
+local lbls = serv:Channel("Другое")
+
+lbls:Label("хочешь вступить в топовую команду одеров? пиши в тг @sosuso10 что ты к полисмену!")
+
+lbls:Label("телеграм канал со скриптами и эксплоитами: t.me/aftermathscript
+
+lbls:Label("основной телеграм канал скрипта со всеми новостями: t.me/antioderhub
+
+lbls:Label("удачного рейда :}")
 
 
 
