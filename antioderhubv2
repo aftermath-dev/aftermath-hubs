@@ -19,6 +19,7 @@ lbls:Label("Версия лоадера: 1.0.")
 lbls:Label("Телеграм канал: t.me/antioderhub")
 
 
+
 local btns = serv:Channel("Brookhaven")
 
 btns:Button("RedzHub", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Red-z-hub-9149"))()
@@ -69,6 +70,8 @@ btns:Button("Специальный флай для антиодеров", funct
 DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
 
+
+
 local btns = serv:Channel("Админ скрипты")
 
 btns:Button("Infinite Yield", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
@@ -86,6 +89,8 @@ btns:Seperator()
 btns:Button("Nameless Admin", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-Admin-6762"))()
 DiscordLib:Notification("Уведомление", "Активировано!", "Ок!")
 end)
+
+
 
 local lbls = serv:Channel("Лог изменений")
 
