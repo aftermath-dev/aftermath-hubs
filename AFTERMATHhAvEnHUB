@@ -38,7 +38,7 @@ noclip.Position = UDim2.new(0.198198289, 0, 0.170167133, 0)
 noclip.Size = UDim2.new(0, 200, 0, 50)
 noclip.ZIndex = 2
 noclip.Font = Enum.Font.Arcade
-noclip.Text = "No Clip"
+noclip.Text = "Aftermath Hub"
 noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
 noclip.TextSize = 14.000
 noclip.MouseButton1Down:connect(function()
@@ -72,7 +72,7 @@ fly.Position = UDim2.new(0.198198199, 0, 0.378906935, 0)
 fly.Size = UDim2.new(0, 200, 0, 50)
 fly.ZIndex = 2
 fly.Font = Enum.Font.Arcade
-fly.Text = "Fly"
+fly.Text = "AntiOder Fly"
 fly.TextColor3 = Color3.fromRGB(255, 255, 255)
 fly.TextSize = 14.000
 fly.MouseButton1Down:connect(function()
@@ -105,7 +105,7 @@ redzhub.Position = UDim2.new(0.198198199, 0, 0.57958442, 0)
 redzhub.Size = UDim2.new(0, 200, 0, 50)
 redzhub.ZIndex = 2
 redzhub.Font = Enum.Font.Arcade
-redzhub.Text = "Redz hub brookhaven"
+redzhub.Text = "AntiOder Hub"
 redzhub.TextColor3 = Color3.fromRGB(255, 255, 255)
 redzhub.TextSize = 14.000
 redzhub.MouseButton1Down:connect(function()
@@ -138,15 +138,11 @@ rochipspanel.Position = UDim2.new(0.198198199, 0, 0.774390221, 0)
 rochipspanel.Size = UDim2.new(0, 200, 0, 50)
 rochipspanel.ZIndex = 2
 rochipspanel.Font = Enum.Font.Arcade
-rochipspanel.Text = "Rochips panel"
+rochipspanel.Text = "Soon"
 rochipspanel.TextColor3 = Color3.fromRGB(255, 255, 255)
 rochipspanel.TextSize = 14.000
 rochipspanel.MouseButton1Down:connect(function()
-if "Rochips Loader" then
-local Rochips_panel,v,u,i=loadstring,"/snippets","gwwv","/raw/main.lua" ;
-Rochips_panel(game:HttpGet("https://glot.io"..v.."/" ..u.."877ga3"..i))();
-return "it will load in around 3 - 131 seconds"
-end,true))()
+print("AFTR SCRIPTS LOADER | Soon...")
 end)
 
 
@@ -173,7 +169,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(2.74933143e-07, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 333, 0, 29)
 TextLabel.Font = Enum.Font.RobotoMono
-TextLabel.Text = "aftermathhaven hub"
+TextLabel.Text = "aftr loader v1"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 14.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
@@ -202,10 +198,10 @@ close.Text = "X"
 close.TextColor3 = Color3.fromRGB(255, 255, 255)
 close.TextSize = 14.000
 close.MouseButton1Down:connect(function()
-frame.visible = false
+ScreenGui:Destroy()
 end)
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "AFTERMATHHAVEN HUB V1";
+        Title = "AFTR LOADER V1";
         Text = "t.me/aftermathscript";
         Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
