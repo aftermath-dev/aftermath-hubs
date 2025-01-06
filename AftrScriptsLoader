@@ -42,7 +42,7 @@ noclip.Text = "Aftermath Hub"
 noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
 noclip.TextSize = 14.000
 noclip.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://pastebin.com/raw/a95RwWVu",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/aftermathhub/refs/heads/main/aftermathhub",true))()
 end)
 
 
@@ -109,7 +109,7 @@ redzhub.Text = "AntiOder Hub"
 redzhub.TextColor3 = Color3.fromRGB(255, 255, 255)
 redzhub.TextSize = 14.000
 redzhub.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/REDzHUB/main/REDzHub",true))()
+loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/aftermath-dev/antioderhub/refs/heads/main/main"))()",true))()
 end)
 
 TextButton_Roundify_12px_3.Name = "TextButton_Roundify_12px"
