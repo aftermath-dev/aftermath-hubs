@@ -67,7 +67,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 100, 0, 28)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "АНТИ ОДЕРЫ СИЛА🎄"
+TextLabel.Text = "АНТИ ОДЕРЫ СИЛА☦️"
 TextLabel.TextColor3 = Color3.new(0, 255, 0) 
 TextLabel.TextScaled = true
 TextLabel.TextSize = 13.250
@@ -166,7 +166,7 @@ Duration = 30;
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "AntiOder Fly";
-	Text = "С НОВЫМ ГОДОМ!☃️";
+	Text = "С РОЖДЕСТВОМ ХРИСТОВА!☦️";
 	Icon = "rbxthumb://type=Asset&id=11935866652&w=150&h=150"})
 Duration = 30;
 
