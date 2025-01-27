@@ -23,34 +23,39 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "*Паспорт в кармане*",
 	Callback = function()
-      		
+      	local message = "*Паспорт в кармане*"
+	sendChatMessage(message)
   	end    
 })
 
 Tab:AddButton({
 	Name = "*Сунул руку в карман*",
 	Callback = function()
-      		print("button pressed")
+        local message = "*Сунул руку в карман*"
+	sendChatMessage(message)
   	end    
 })
 
 Tab:AddButton({
 	Name = "*Взял паспорт*",
 	Callback = function()
-      		print("button pressed")
+        local message = "*Взял паспорт*"
+	sendChatMessage(message)
   	end    
 })
 
 Tab:AddButton({
 	Name = "*Вытянул руку из кармана*",
 	Callback = function()
-      		print("button pressed")
+      	local message = "*Вытянул руку из кармана*"
+	sendChatMessage(message)
   	end    
 })
 
 Tab:AddButton({
 	Name = "*Легким движением руки передал паспорт человеку на против*",
 	Callback = function()
-      		print("button pressed")
+      	local message = "*Легким движением руки передал паспорт человеку на против*"
+	sendChatMessage(message)
   	end    
 })
