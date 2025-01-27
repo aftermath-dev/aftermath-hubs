@@ -21,41 +21,22 @@ local Tab = Window:MakeTab({
 })
 
 Tab:AddButton({
-	Name = "*Паспорт в кармане*",
+	Name = "Достать Паспорт",
 	Callback = function()
       	local message = "*Паспорт в кармане*"
+	local message1 = "*Сунул руку в карман*"
+	local message2 = "*Взял паспорт*"
+	local message3 = "*Вытянул руку из кармана*"
+	local message4 = "*Легким движением руки передал паспорт человеку на против*"
 	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
   	end    
 })
 
-Tab:AddButton({
-	Name = "*Сунул руку в карман*",
-	Callback = function()
-        local message = "*Сунул руку в карман*"
-	sendChatMessage(message)
-  	end    
-})
-
-Tab:AddButton({
-	Name = "*Взял паспорт*",
-	Callback = function()
-        local message = "*Взял паспорт*"
-	sendChatMessage(message)
-  	end    
-})
-
-Tab:AddButton({
-	Name = "*Вытянул руку из кармана*",
-	Callback = function()
-      	local message = "*Вытянул руку из кармана*"
-	sendChatMessage(message)
-  	end    
-})
-
-Tab:AddButton({
-	Name = "*Легким движением руки передал паспорт человеку на против*",
-	Callback = function()
-      	local message = "*Легким движением руки передал паспорт человеку на против*"
-	sendChatMessage(message)
-  	end    
-})
