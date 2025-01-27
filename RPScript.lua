@@ -11,6 +11,10 @@ local function sendChatMessage(message)
     end
 end
 
+local messagestart = "RP СКРИПТ ОТ AFTR ЗАПУЩЕН"
+sendChatMessage(messagestart)
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/guiformyfriend/refs/heads/main/redversion.lua')))()
 local Window = OrionLib:MakeWindow({Name = "RP script special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
@@ -28,6 +32,26 @@ Tab:AddButton({
 	local message2 = "*Взял паспорт*"
 	local message3 = "*Вытянул руку из кармана*"
 	local message4 = "*Легким движением руки передал паспорт человеку на против*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Наручники",
+	Callback = function()
+      	local message = "*Наручники на поясе*"
+	local message1 = "*Снял наручник с пояса*"
+	local message2 = "*Наручник в руке*"
+	local message3 = "*Резкими движениями накинул наручники*"
+	local message4 = "*Закрепил наручники*"
 	sendChatMessage(message)
 	wait(2)
 	sendChatMessage(message1)
