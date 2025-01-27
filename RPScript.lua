@@ -64,3 +64,18 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddTextbox({
+	Name = "Кастомное действие",
+	Default = "",
+	TextDisappear = false,
+	Callback = function(action)
+	end	  
+})
+Tab:AddButton({
+	Name = "Исполнить действие",
+	Callback = function()
+	sendChatMessage(action)
+  	end    
+})
+
+
