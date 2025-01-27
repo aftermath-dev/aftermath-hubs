@@ -11,7 +11,7 @@ local function sendChatMessage(message)
     end
 end
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/aftermath-dev/antioderlib/refs/heads/main/RipUI.lua')))()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/guiformyfriend/refs/heads/main/redversion.lua')))()
 local Window = OrionLib:MakeWindow({Name = "RP script special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
 local Tab = Window:MakeTab({
