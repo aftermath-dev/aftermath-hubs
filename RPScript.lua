@@ -93,11 +93,50 @@ CarTab:AddButton({
   	end    
 })
 
+CarTab:AddButton({
+	Name = "Высадить из машины",
+	Callback = function()
+      	local message = "*Преступник в машине*"
+	local message1 = "*Открыл дверь*"
+	local message2 = "*Вытолкал преступника с машины*"
+	local message3 = "*Закрыл дверь*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+CarTab:AddButton({
+	Name = "Завести машину",
+	Callback = function()
+      	local message = "*Ключ в кармане*"
+	local message1 = "*Засунул руку в карман*"
+	local message2 = "*Достал ключ*"
+	local message3 = "*Легким движем руки вставил ключ в стартер автомобиля*"
+	local message4 = "*Автомобиль завелся*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
 local CustomTab = Window:MakeTab({
 	Name = "Кастом",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
+
 
 CustomTab:AddTextbox({
 	Name = "Кастомное действие (без звездочек)",
@@ -111,6 +150,61 @@ CustomTab:AddTextbox({
 	        end
 	end	  
 })
+
+local FightTab = Window:MakeTab({
+	Name = "Ближний бой",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+FightTab:AddButton({
+	Name = "Бой на кулаках",
+	Callback = function()
+      	local message = "*Сжал кулаки*"
+	local message1 = "*Ударил в ребро*"
+	local message2 = "*Ударил в подбородок*"
+	local message3 = "*Враг в нокауте*"
+	local message4 = "*Добивает ногой*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
+local LoseTab = Window:MakeTab({
+	Name = "Поражение",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+LoseTab:AddButton({
+	Name = "Нокаут",
+	Callback = function()
+      	local message = "*Оглушился из-за сильного удара*"
+	local message1 = "*Еле держится на ногах отходя назад*"
+	local message2 = "*Падает на пол*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+  	end    
+})
+
+
+
+
+	
+
+
+
+
 
 
 
