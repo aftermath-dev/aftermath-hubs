@@ -19,7 +19,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kig
 local Window = OrionLib:MakeWindow({Name = "RP script special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
 local Tab = Window:MakeTab({
-	Name = "Main",
+	Name = "Общее",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -44,7 +44,13 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddButton({
+local PoliceTab = Window:MakeTab({
+	Name = "Полиция",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+PoliceTab:AddButton({
 	Name = "Наручники",
 	Callback = function()
       	local message = "*Наручники на поясе*"
@@ -64,18 +70,47 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddTextbox({
-	Name = "Кастомное действие",
+local CarTab = Window:MakeTab({
+	Name = "Машина",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+CarTab:AddButton({
+	Name = "Посадить в машину",
+	Callback = function()
+      	local message = "*Дверь автомобиля закрыта*"
+	local message1 = "*Открыл дверь*"
+	local message2 = "*Затолкал преступника в автомобиль затем закрыл дверь*"
+	local message3 = "*Преступник в машине*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+local CustomTab = Window:MakeTab({
+	Name = "Кастом",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+CustomTab:AddTextbox({
+	Name = "Кастомное действие (без звездочек)",
 	Default = "",
 	TextDisappear = false,
 	Callback = function(action)
+	        local message = action
+                if message ~= "" then
+                        local formattedMessage = "*" .. message .. "*"
+                        sendChatMessage(formattedMessage)
+	        end
 	end	  
 })
-Tab:AddButton({
-	Name = "Исполнить действие",
-	Callback = function()
-	sendChatMessage(action)
-  	end    
-})
+
 
 
