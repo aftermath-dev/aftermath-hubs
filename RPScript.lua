@@ -24,7 +24,6 @@ local InfoTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-InfoTab:AddLabel("Добро пожаловать в рп скрипт, "..localPlayer.DisplayName)
 InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf")
 InfoTab:AddLabel("Инжектор: "..identifyexecutor())
 
