@@ -68,7 +68,7 @@ Tab:AddButton({
 	local message1 = "*Сунул руку в карман*"
 	local message2 = "*Достал медкарту*"
 	local message3 = "*Медкарта в руке*"
-	local message4 = "*Легким движением руки передал медкарту человеку напротив*"I'll
+	local message4 = "*Легким движением руки передал медкарту человеку напротив*"
 	sendChatMessage(message)
 	wait(2)
 	sendChatMessage(message1)
