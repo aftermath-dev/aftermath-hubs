@@ -24,8 +24,15 @@ local InfoTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local TimeLabel = InfoTab:AddLabel("Время: "..os.date("%H")..":"..os.date("%M"))
+a = 1
+repeat
+	wait(60)
+        TimeLabel:Set("Время: "..os.date("%H")..":"..os.date("%M"))
+until a > 10
 InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf")
 InfoTab:AddLabel("Инжектор: "..identifyexecutor())
+
 
 
 local Tab = Window:MakeTab({
