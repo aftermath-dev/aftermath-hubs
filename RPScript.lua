@@ -24,7 +24,7 @@ local InfoTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf")
+InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf и 1geriffdu")
 InfoTab:AddLabel("Инжектор: "..identifyexecutor())
 
 
