@@ -24,7 +24,7 @@ local InfoTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local TimeLabel = InfoTab:AddLabel("Время: "..os.date("%H")..":"..os.date("%M"))
+InfoTab:AddLabel("Добро пожаловать в рп скрипт, "..localPlayer.DisplayName)
 InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf")
 InfoTab:AddLabel("Инжектор: "..identifyexecutor())
 
