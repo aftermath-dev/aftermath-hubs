@@ -16,7 +16,7 @@ sendChatMessage(messagestart)
 
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/guiformyfriend/refs/heads/main/redversion.lua')))()
-local Window = OrionLib:MakeWindow({Name = "RP script special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
+local Window = OrionLib:MakeWindow({Name = "RP script 2.0 special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
 local Tab = Window:MakeTab({
 	Name = "Общее",
@@ -76,9 +76,27 @@ Tab:AddButton({
 	sendChatMessage(message2)
 	wait(2)
 	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
   	end    
 })
 
+Tab:AddButton({
+	Name = "Забрать медкарту",
+	Callback = function()
+      	local message = "*Медкарта показана*"
+	local message1 = "*Забрал медкарту у человека напротив*"
+	local message2 = "*Легким движением руки положил медкарту в карман*"
+	local message3 = "*Паспорт в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
 local PoliceTab = Window:MakeTab({
 	Name = "Полиция",
 	Icon = "rbxassetid://4483345998",
@@ -132,6 +150,21 @@ PoliceTab:AddButton({
 	sendChatMessage(message)
   	end    
 })
+
+PoliceTab:AddButton({
+	Name = "Положить дубинку",
+	Callback = function()
+      	local message = "*Дубинка в руке*"
+	local message1 = "*Прикрепил дубинку к поясу*"
+	local message2 = "*Дубинка на поясе*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+  	end    
+})
+
 
 
 
@@ -192,6 +225,20 @@ CarTab:AddButton({
 	sendChatMessage(message3)
 	wait(2)
 	sendChatMessage(message4)
+  	end    
+})
+
+CarTab:AddButton({
+	Name = "Вынуть ключ",
+	Callback = function()
+      	local message = "*Вытащил ключ из стартера*"
+	local message1 = "*Положил ключ в карман*"
+	local message2 = "*Ключ в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
   	end    
 })
 
@@ -258,6 +305,30 @@ FightTab:AddButton({
   	end    
 })
 
+FightTab:AddButton({
+	Name = "Удар прикладкой пистолета",
+	Callback = function()
+      	local message = "*Наклонил пистолет на 30°*"
+	local message1 = "*Ударил рукояткой по голове*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
+
+FightTab:AddButton({
+	Name = "Удар прикладкой автомата",
+	Callback = function()
+      	local message = "*Развернул автомат*"
+	local message1 = "*С размаху ударил рукояткой автомата*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
+
+
+
 local LoseTab = Window:MakeTab({
 	Name = "Поражение",
 	Icon = "rbxassetid://4483345998",
@@ -277,6 +348,86 @@ LoseTab:AddButton({
 	sendChatMessage(message2)
   	end    
 })
+
+LoseTab:AddButton({
+	Name = "Нокаут от пули",
+	Callback = function()
+      	local message = "*Пуля попала в тело*"
+	local message1 = "*Из раны течет кровь*"
+	local message2 = "*Теряет сознание иза потери крови*"
+	local message3 = "*Упал на пол*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+LoseTab:AddButton({
+	Name = "Нокаут от твердого ближнего оружия",
+	Callback = function()
+      	local message = "*Удар в тело*"
+	local message1 = "*Мутнеет в глазах*"
+	local message2 = "*Еле держится на ногах*"
+	local message3 = "*Упал на пол*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+LoseTab:AddButton({
+	Name = "Нокаут от острого ближнего оружия",
+	Callback = function()
+      	local message = "*Оружие воткнулось в тело*"
+	local message1 = "*Из раны течет кровь*"
+	local message2 = "*Мутнеет в глазах из-за боли*"
+	local message3 = "*Ноги дрожат*"
+	local message4 = "*Упал на пол*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
+local ProtectTab = Window:MakeTab({
+	Name = "Оборона",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+ProtectTab:AddButton({
+	Name = "Защита от пули",
+	Callback = function()
+      	local message = "*Пуля отскочила от брони*"
+	sendChatMessage(message)
+  	end    
+})
+
+ProtectTab:AddButton({
+	Name = "Повреждение брони",
+	Callback = function()
+      	local message = "*Броня повреждена*"
+	sendChatMessage(message)
+  	end    
+})
+
+
+
+
 
 
 
