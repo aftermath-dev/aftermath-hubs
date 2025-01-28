@@ -18,6 +18,16 @@ sendChatMessage(messagestart)
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/guiformyfriend/refs/heads/main/redversion.lua')))()
 local Window = OrionLib:MakeWindow({Name = "RP script 2.0 special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
+local InfoTab = Window:MakeTab({
+	Name = "Информация",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+InfoTab:AddParagraph("Инфа о скрипте","был написан Aftr.lua, создатель отыгровок: Zzzzzzoooooodf")
+InfoTab:AddLabel("Инжектор: "..identifyexecutor())
+
+
 local Tab = Window:MakeTab({
 	Name = "Общее",
 	Icon = "rbxassetid://4483345998",
