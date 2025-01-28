@@ -70,6 +70,36 @@ PoliceTab:AddButton({
   	end    
 })
 
+PoliceTab:AddButton({
+	Name = "Удар дубинкой",
+	Callback = function()
+      	local message = "*Дубинка на поясе*"
+	local message1 = "*Протянул руку к поясу*"
+	local message2 = "*Взял дубинку*"
+	local message3 = "*Дубинка в руке*"
+	local message4 = "*Ударил дубинкой человека напротив*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
+PoliceTab:AddButton({
+	Name = "Удар дубинкой по голове",
+	Callback = function()
+      	local message = "*Ударил по голове дубинкой*"
+	sendChatMessage(message)
+  	end    
+})
+
+
+
 local CarTab = Window:MakeTab({
 	Name = "Машина",
 	Icon = "rbxassetid://4483345998",
@@ -127,6 +157,22 @@ CarTab:AddButton({
 	sendChatMessage(message3)
 	wait(2)
 	sendChatMessage(message4)
+  	end    
+})
+
+CarTab:AddButton({
+	Name = "Открыть машину",
+	Callback = function()
+      	local message = "*Открыл машину*"
+	sendChatMessage(message)
+  	end    
+})
+
+CarTab:AddButton({
+	Name = "Закрыть машину",
+	Callback = function()
+      	local message = "*Закрыл машину*"
+	sendChatMessage(message)
   	end    
 })
 
