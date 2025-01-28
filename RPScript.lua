@@ -44,6 +44,41 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Забрать Паспорт",
+	Callback = function()
+      	local message = "*Паспорт показан*"
+	local message1 = "*Забрал паспорт у человека напротив*"
+	local message2 = "*Легким движением руки положил паспорт в карман*"
+	local message3 = "*Паспорт в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Дать медкарту",
+	Callback = function()
+      	local message = "*Медкарта в кармане*"
+	local message1 = "*Сунул руку в карман*"
+	local message2 = "*Достал медкарту*"
+	local message3 = "*Медкарта в руке*"
+	local message4 = "*Легким движением руки передал медкарту человеку напротив*"I'll
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
 local PoliceTab = Window:MakeTab({
 	Name = "Полиция",
 	Icon = "rbxassetid://4483345998",
