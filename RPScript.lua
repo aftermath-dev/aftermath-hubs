@@ -437,13 +437,6 @@ ProtectTab:AddButton({
   	end    
 })
 
-a = 1
-repeat
-	wait(60)
-        TimeLabel:Set("Время: "..os.date("%H")..":"..os.date("%M"))
-until a > 10
-
-
 
 
 	
