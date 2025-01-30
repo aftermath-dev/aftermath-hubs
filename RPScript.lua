@@ -108,6 +108,41 @@ Tab:AddButton({
 	sendChatMessage(message3)
   	end    
 })
+
+Tab:AddButton({
+	Name = "Достать Паспорт",
+	Callback = function()
+      	local message = "*Водительское удостоверение в кармане*"
+	local message1 = "*Сунул руку в карман*"
+	local message2 = "*Достал водительское удостоверение*"
+	local message3 = "*Легким движением руки передал водительское удостоверение человеку напротив*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Забрать Паспорт",
+	Callback = function()
+      	local message = "*Водительское удостоверение показано*"
+	local message1 = "*Забрал водительское удостоверение у человека напротив*"
+	local message2 = "*Легким движением руки положил водительское удостоверение в карман*"
+	local message3 = "*Водительское удостоверение в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
 local PoliceTab = Window:MakeTab({
 	Name = "Полиция",
 	Icon = "rbxassetid://4483345998",
@@ -115,13 +150,33 @@ local PoliceTab = Window:MakeTab({
 })
 
 PoliceTab:AddButton({
-	Name = "Наручники",
+	Name = "Надеть наручники",
 	Callback = function()
       	local message = "*Наручники на поясе*"
 	local message1 = "*Снял наручник с пояса*"
 	local message2 = "*Наручник в руке*"
 	local message3 = "*Резкими движениями накинул наручники*"
 	local message4 = "*Закрепил наручники*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+  	end    
+})
+
+PoliceTab:AddButton({
+	Name = "Снять наручники",
+	Callback = function()
+      	local message = "*Наручники на преступнике*"
+	local message1 = "*Резкими движениями снял наручники с преступника*"
+	local message2 = "*Наручники в руке*"
+	local message3 = "*Положил наручники на пояс*"
+	local message4 = "*Наручники на поясе*"
 	sendChatMessage(message)
 	wait(2)
 	sendChatMessage(message1)
@@ -256,7 +311,7 @@ CarTab:AddButton({
 CarTab:AddButton({
 	Name = "Открыть машину",
 	Callback = function()
-      	local message = "*Открыл машину*"
+      	local message = "*Открыл дверь автомобиля*"
 	sendChatMessage(message)
   	end    
 })
@@ -264,7 +319,7 @@ CarTab:AddButton({
 CarTab:AddButton({
 	Name = "Закрыть машину",
 	Callback = function()
-      	local message = "*Закрыл машину*"
+      	local message = "*Закрыл дверь автомобиля*"
 	sendChatMessage(message)
   	end    
 })
@@ -338,7 +393,63 @@ FightTab:AddButton({
   	end    
 })
 
+FightTab:AddButton({
+        Name = "Удар ногой",
+	Callback = function()
+      	local message = "*Ударил ногой в грудь*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
 
+FightTab:AddButton({
+	Name = "Карате",
+	Callback = function()
+      	local message = "*Замахнулся ногой*"
+	local message1 = "*С разворота ударил ногой в голову*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
+
+FightTab:AddButton({
+	Name = "Хлопок",
+	Callback = function()
+      	local message = "*Ударил двумя руками в два виска*"
+	local message1 = "*Оглушил*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
+
+
+FightTab:AddButton({
+	Name = "Удар об колено",
+	Callback = function()
+      	local message = "*Взял за голову*"
+	local message1 = "*Ударил головой об колено*"
+	local message2 = "*Бьет коленом об голову*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+  	end    
+})
+
+FightTab:AddButton({
+	Name = "Удар головой",
+	Callback = function()
+      	local message = "*Ударил с размаху головой*"
+	local message1 = "*Оглушил*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
 
 local LoseTab = Window:MakeTab({
 	Name = "Поражение",
@@ -414,6 +525,23 @@ LoseTab:AddButton({
   	end    
 })
 
+LoseTab:AddButton({
+	Name = "Оглушение",
+	Callback = function()
+      	local message = "*Потемнело в глазах*"
+	local message1 = "*Еле держится на ногах*"
+	local message2 = "*Оглушение проходит**"
+	local message3 = "*Оглушение прошло*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
+
 local ProtectTab = Window:MakeTab({
 	Name = "Оборона",
 	Icon = "rbxassetid://4483345998",
@@ -436,12 +564,105 @@ ProtectTab:AddButton({
   	end    
 })
 
+ProtectTab:AddButton({
+	Name = "Уклониться",
+	Callback = function()
+      	local message = "*Уклонился*"
+	sendChatMessage(message)
+  	end    
+})
+
+ProtectTab:AddButton({
+	Name = "Разруб пули катаной",
+	Callback = function()
+      	local message = "*Разрубил пулю катаной*"
+	sendChatMessage(message)
+  	end    
+})
 
 
+ProtectTab:AddButton({
+	Name = "Броня сломалась",
+	Callback = function()
+      	local message = "*Пуля отразилась от брони после чего броня сломалась*"
+	sendChatMessage(message)
+  	end    
+})
+
+ProtectTab:AddButton({
+	Name = "Блок удара",
+	Callback = function()
+      	local message = "*Заблокировал удар*"
+	sendChatMessage(message)
+  	end    
+})
+
+ProtectTab:AddButton({
+	Name = "Уклонение присядом",
+	Callback = function()
+      	local message = "*Присел, тем самым уклонился*"
+	sendChatMessage(message)
+  	end    
+})
+
+local HealthTab = Window:MakeTab({
+	Name = "Лечение",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+HealthTab:AddButton({
+	Name = "Перевязка",
+	Callback = function()
+      	local message = "*Достал бинт из кармана*"
+	local message1 = "*Начал перевязывать рану*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
 	
+HealthTab:AddButton({
+	Name = "Прижечь рану пистолетом",
+	Callback = function()
+      	local message = "*Нагревает дуло пистолета*"
+	local message1 = "*Приложил горячее дуло пистолета к ране*"
+	local message2 = "*Прижёг рану*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+  	end    
+})
 
+HealthTab:AddButton({
+	Name = "Вытащить пулю",
+	Callback = function()
+      	local message = "*Ковыряет с раны пулю*"
+	local message1 = "*Вытаскивает пулю с раны*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+  	end    
+})
 
-
+HealthTab:AddButton({
+	Name = "Вытащить пулю в машине",
+	Callback = function()
+      	local message = "*Схватился зубами за пулю в ране*"
+	local message1 = "*Достал пулю*"
+	local message2 = "*Пуля в зубах*"
+	local message3 = "*Выплюнул пулю*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+  	end    
+})
 
 
 
