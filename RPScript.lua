@@ -110,7 +110,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Достать Паспорт",
+	Name = "Достать водительское удостоверение",
 	Callback = function()
       	local message = "*Водительское удостоверение в кармане*"
 	local message1 = "*Сунул руку в карман*"
@@ -127,7 +127,7 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Забрать Паспорт",
+	Name = "Забрать водительское удостоверение",
 	Callback = function()
       	local message = "*Водительское удостоверение показано*"
 	local message1 = "*Забрал водительское удостоверение у человека напротив*"
