@@ -815,6 +815,7 @@ local TextButton = Instance.new("TextButton")
 local TextButton1 = Instance.new("TextButton")
 local TextButton2 = Instance.new("TextButton")
 local TextButton3 = Instance.new("TextButton")
+--[[
 local TextButton4 = Instance.new("TextButton")
 local TextButton5 = Instance.new("TextButton")
 local TextButton6 = Instance.new("TextButton")
@@ -858,8 +859,11 @@ local TextButton43 = Instance.new("TextButton")
 local TextButton44 = Instance.new("TextButton")
 local TextButton45 = Instance.new("TextButton")
 local TextButton46 = Instance.new("TextButton")
+]]
 local UICorner = Instance.new("UICorner")
-
+local UICorner1 = Instance.new("UICorner")
+local UICorner2 = Instance.new("UICorner")
+local UICorner3 = Instance.new("UICorner")
 --Properties:
 
 rpgui.Name = "rpgui"
@@ -937,6 +941,211 @@ local UserInputService = game:GetService("UserInputService")
         	end
         end)
 
+TextButton1.Parent = rpgui
+TextButton1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton1.BorderSizePixel = 0
+TextButton1.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
+TextButton1.Size = UDim2.new(0, 50, 0, 50)
+TextButton1.Font = Enum.Font.Gotham
+TextButton1.Text = "Забрать паспорт"
+TextButton1.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton1.TextScaled = true
+TextButton1.TextSize = 14.000
+TextButton1.TextWrapped = true
+TextButton1.Visible = false
+TextButton1.MouseButton1Click:Connect(function()
+	local message = "*Паспорт показан*"
+	local message1 = "*Забрал паспорт у человека напротив*"
+	local message2 = "*Легким движением руки положил паспорт в карман*"
+	local message3 = "*Паспорт в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+end
+	
+
+local UserInputService = game:GetService("UserInputService")
+
+        local gui = TextButton1
+
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+        	local delta = input.Position - dragStart
+        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        gui.InputBegan:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        		dragging = true
+        		dragStart = input.Position
+        		startPos = gui.Position
+        		
+        		input.Changed:Connect(function()
+        			if input.UserInputState == Enum.UserInputState.End then
+        				dragging = false
+        			end
+        		end)
+        	end
+        end)
+
+        gui.InputChanged:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        		dragInput = input
+        	end
+        end)
+
+        UserInputService.InputChanged:Connect(function(input)
+        	if input == dragInput and dragging then
+        		update(input)
+        	end
+        end)
+TextButton2.Parent = rpgui
+TextButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.BorderSizePixel = 0
+TextButton2.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
+TextButton2.Size = UDim2.new(0, 50, 0, 50)
+TextButton2.Font = Enum.Font.Gotham
+TextButton2.Text = "Достать медкарту"
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.TextScaled = true
+TextButton2.TextSize = 14.000
+TextButton2.TextWrapped = true
+TextButton2.Visible = false
+TextButton2.MouseButton1Click:Connect(function()
+	local message = "*Медкарта в кармане*"
+	local message1 = "*Сунул руку в карман*"
+	local message2 = "*Достал медкарту*"
+	local message3 = "*Медкарта в руке*"
+	local message4 = "*Легким движением руки передал медкарту человеку напротив*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+	wait(2)
+	sendChatMessage(message4)
+end
+	
+
+local UserInputService = game:GetService("UserInputService")
+
+        local gui = TextButton2
+
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+        	local delta = input.Position - dragStart
+        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        gui.InputBegan:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        		dragging = true
+        		dragStart = input.Position
+        		startPos = gui.Position
+        		
+        		input.Changed:Connect(function()
+        			if input.UserInputState == Enum.UserInputState.End then
+        				dragging = false
+        			end
+        		end)
+        	end
+        end)
+
+        gui.InputChanged:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        		dragInput = input
+        	end
+        end)
+
+        UserInputService.InputChanged:Connect(function(input)
+        	if input == dragInput and dragging then
+        		update(input)
+        	end
+        end)
+TextButton3.Parent = rpgui
+TextButton3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton3.BorderSizePixel = 0
+TextButton3.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
+TextButton3.Size = UDim2.new(0, 50, 0, 50)
+TextButton3.Font = Enum.Font.Gotham
+TextButton3.Text = "Забрать медкарту"
+TextButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton3.TextScaled = true
+TextButton3.TextSize = 14.000
+TextButton3.TextWrapped = true
+TextButton3.Visible = false
+TextButton3.MouseButton1Click:Connect(function()
+	local message = "*Медкарта показана*"
+	local message1 = "*Забрал медкарту у человека напротив*"
+	local message2 = "*Легким движением руки положил медкарту в карман*"
+	local message3 = "*Паспорт в кармане*"
+	sendChatMessage(message)
+	wait(2)
+	sendChatMessage(message1)
+	wait(2)
+	sendChatMessage(message2)
+	wait(2)
+	sendChatMessage(message3)
+end
+	
+
+local UserInputService = game:GetService("UserInputService")
+
+        local gui = TextButton3
+
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+        	local delta = input.Position - dragStart
+        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        gui.InputBegan:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        		dragging = true
+        		dragStart = input.Position
+        		startPos = gui.Position
+        		
+        		input.Changed:Connect(function()
+        			if input.UserInputState == Enum.UserInputState.End then
+        				dragging = false
+        			end
+        		end)
+        	end
+        end)
+
+        gui.InputChanged:Connect(function(input)
+        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        		dragInput = input
+        	end
+        end)
+
+        UserInputService.InputChanged:Connect(function(input)
+        	if input == dragInput and dragging then
+        		update(input)
+        	end
+        end)
+--[[
 TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1147,7 +1356,6 @@ local UserInputService = game:GetService("UserInputService")
         		update(input)
         	end
         end)
-
 TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1217,7 +1425,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1286,7 +1495,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1355,7 +1565,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1424,7 +1635,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1493,7 +1705,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1562,7 +1775,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1631,7 +1845,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1700,7 +1915,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1769,7 +1985,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1838,7 +2055,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1907,7 +2125,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -1976,7 +2195,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2045,7 +2265,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2114,7 +2335,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2183,7 +2405,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2252,7 +2475,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2321,7 +2545,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2390,7 +2615,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2459,7 +2685,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2528,7 +2755,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2597,7 +2825,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2666,7 +2895,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2735,7 +2965,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2804,7 +3035,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2873,7 +3105,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -2942,7 +3175,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3011,7 +3245,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3080,7 +3315,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3149,7 +3385,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3218,7 +3455,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3287,7 +3525,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3356,7 +3595,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3425,7 +3665,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3494,7 +3735,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3563,7 +3805,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3632,7 +3875,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3701,7 +3945,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3770,7 +4015,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
+        end)
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -3839,214 +4085,8 @@ local UserInputService = game:GetService("UserInputService")
         	if input == dragInput and dragging then
         		update(input)
         	end
-        end)TextButton.Parent = rpgui
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
-TextButton.Size = UDim2.new(0, 50, 0, 50)
-TextButton.Font = Enum.Font.Gotham
-TextButton.Text = "Достать паспорт"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.Visible = false
-TextButton.MouseButton1Click:Connect(function()
-	local message = "*Паспорт в кармане*"
-	local message1 = "*Сунул руку в карман*"
-	local message2 = "*Взял паспорт*"
-	local message3 = "*Вытянул руку из кармана*"
-	local message4 = "*Легким движением руки передал паспорт человеку на против*"
-	sendChatMessage(message)
-	wait(2)
-	sendChatMessage(message1)
-	wait(2)
-	sendChatMessage(message2)
-	wait(2)
-	sendChatMessage(message3)
-	wait(2)
-	sendChatMessage(message4)
-end
-	
-
-local UserInputService = game:GetService("UserInputService")
-
-        local gui = TextButton
-
-        local dragging
-        local dragInput
-        local dragStart
-        local startPos
-
-        local function update(input)
-        	local delta = input.Position - dragStart
-        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        end
-
-        gui.InputBegan:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        		dragging = true
-        		dragStart = input.Position
-        		startPos = gui.Position
-        		
-        		input.Changed:Connect(function()
-        			if input.UserInputState == Enum.UserInputState.End then
-        				dragging = false
-        			end
-        		end)
-        	end
         end)
-
-        gui.InputChanged:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        		dragInput = input
-        	end
-        end)
-
-        UserInputService.InputChanged:Connect(function(input)
-        	if input == dragInput and dragging then
-        		update(input)
-        	end
-        end)TextButton.Parent = rpgui
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
-TextButton.Size = UDim2.new(0, 50, 0, 50)
-TextButton.Font = Enum.Font.Gotham
-TextButton.Text = "Достать паспорт"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.Visible = false
-TextButton.MouseButton1Click:Connect(function()
-	local message = "*Паспорт в кармане*"
-	local message1 = "*Сунул руку в карман*"
-	local message2 = "*Взял паспорт*"
-	local message3 = "*Вытянул руку из кармана*"
-	local message4 = "*Легким движением руки передал паспорт человеку на против*"
-	sendChatMessage(message)
-	wait(2)
-	sendChatMessage(message1)
-	wait(2)
-	sendChatMessage(message2)
-	wait(2)
-	sendChatMessage(message3)
-	wait(2)
-	sendChatMessage(message4)
-end
-	
-
-local UserInputService = game:GetService("UserInputService")
-
-        local gui = TextButton
-
-        local dragging
-        local dragInput
-        local dragStart
-        local startPos
-
-        local function update(input)
-        	local delta = input.Position - dragStart
-        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        end
-
-        gui.InputBegan:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        		dragging = true
-        		dragStart = input.Position
-        		startPos = gui.Position
-        		
-        		input.Changed:Connect(function()
-        			if input.UserInputState == Enum.UserInputState.End then
-        				dragging = false
-        			end
-        		end)
-        	end
-        end)
-
-        gui.InputChanged:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        		dragInput = input
-        	end
-        end)
-
-        UserInputService.InputChanged:Connect(function(input)
-        	if input == dragInput and dragging then
-        		update(input)
-        	end
-        end)TextButton.Parent = rpgui
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.095693782, 0, 0.400375932, 0)
-TextButton.Size = UDim2.new(0, 50, 0, 50)
-TextButton.Font = Enum.Font.Gotham
-TextButton.Text = "Достать паспорт"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-TextButton.Visible = false
-TextButton.MouseButton1Click:Connect(function()
-	local message = "*Паспорт в кармане*"
-	local message1 = "*Сунул руку в карман*"
-	local message2 = "*Взял паспорт*"
-	local message3 = "*Вытянул руку из кармана*"
-	local message4 = "*Легким движением руки передал паспорт человеку на против*"
-	sendChatMessage(message)
-	wait(2)
-	sendChatMessage(message1)
-	wait(2)
-	sendChatMessage(message2)
-	wait(2)
-	sendChatMessage(message3)
-	wait(2)
-	sendChatMessage(message4)
-end
-	
-
-local UserInputService = game:GetService("UserInputService")
-
-        local gui = TextButton
-
-        local dragging
-        local dragInput
-        local dragStart
-        local startPos
-
-        local function update(input)
-        	local delta = input.Position - dragStart
-        	gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-        end
-
-        gui.InputBegan:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-        		dragging = true
-        		dragStart = input.Position
-        		startPos = gui.Position
-        		
-        		input.Changed:Connect(function()
-        			if input.UserInputState == Enum.UserInputState.End then
-        				dragging = false
-        			end
-        		end)
-        	end
-        end)
-
-        gui.InputChanged:Connect(function(input)
-        	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-        		dragInput = input
-        	end
-        end)
-
-        UserInputService.InputChanged:Connect(function(input)
-        	if input == dragInput and dragging then
-        		update(input)
-        	end
-        end)TextButton.Parent = rpgui
+TextButton.Parent = rpgui
 TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.BorderSizePixel = 0
@@ -4186,12 +4226,135 @@ local UserInputService = game:GetService("UserInputService")
         		update(input)
         	end
         end)
+]]
 UICorner.Parent = TextButton
+UICorner1.Parent = TextButton1
+UICorner2.Parent = TextButton2
+UICorner3.Parent = TextButton3
 
+local djshsh = Tab:AddSection({
+	Name = "Создать"
+})
 
+--[[
+Name = <string> - The name of the section.
+]]
+local button = ""
 
+ButTab:AddDropdown({
+	Name = "Действие",
+	Default = "",
+	Options = {"Достать паспорт", "Забрать паспорт", "Достать медкарту", "Забрать медкарту"},
+	Callback = function(Value)
+		if Value == "Достать паспорт" then
+			local button = "1"
+		elseif Value == "Забрать паспорт" then
+			local button = "2"
+		elseif Value == "Достать медкарту" then
+			local button = "3"
+		elseif Value == "Забрать медкарту" then
+			local button = "4"
+		end
+	end    
+})
 
+ButTab:AddButton({
+	Name = "Создать кнопку",
+	Callback = function()
+      		if button == "1" then
+			TextButton.Visible = true
+		elseif button == "2" then
+			TextButton1.Visible = true
+		elseif button == "3" then
+			TextButton2.Visible = true
+		elseif button == "4" then
+			TextButton3.Visible = true
+		else
+			OrionLib:MakeNotification({
+	                Name = "Ошибка",
+	                Content = "Выбери действие, чел",
+	                Image = "rbxassetid://4483345998",
+	                Time = 5
+                        })
+		end
+  	end    
+})
 
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+--[[
+Name = <string> - The name of the dropdown.
+Default = <string> - The default value of the dropdown.
+Options = <table> - The options in the dropdown.
+Callback = <function> - The function of the dropdown.
+]]
+
+local hssgshs = Tab:AddSection({
+	Name = "Удалить"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+local button1 = ""
+
+ButTab:AddDropdown({
+	Name = "Действие",
+	Default = "",
+	Options = {"Достать паспорт", "Забрать паспорт", "Достать медкарту", "Забрать медкарту"},
+	Callback = function(Value)
+		if Value == "Достать паспорт" then
+			local button1 = "1"
+		elseif Value == "Забрать паспорт" then
+			local button1 = "2"
+		elseif Value == "Достать медкарту" then
+			local button1 = "3"
+		elseif Value == "Забрать медкарту" then
+			local button1 = "4"
+		end
+	end    
+})
+
+ButTab:AddButton({
+	Name = "Удалить кнопку",
+	Callback = function()
+      		if button1 == "1" then
+			TextButton.Visible = false
+		elseif button1 == "2" then
+			TextButton1.Visible = false
+		elseif button1 == "3" then
+			TextButton2.Visible = false
+		elseif button1 == "4" then
+			TextButton3.Visible = false
+		else
+			OrionLib:MakeNotification({
+	                Name = "Ошибка",
+	                Content = "Выбери действие, чел",
+	                Image = "rbxassetid://4483345998",
+	                Time = 5
+                        })
+		end
+  	end    
+})
+
+ButTab:AddButton({
+	Name = "Удалить все кнопки",
+	Callback = function()
+      		TextButton.Visible = false
+		TextButton1.Visible = false
+		TextButton2.Visible = false
+		TextButton3.Visible = false
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 
 
 
