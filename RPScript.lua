@@ -11,10 +11,6 @@ local function sendChatMessage(message)
     end
 end
 
-local messagestart = "RP СКРИПТ ОТ AFTR ЗАПУЩЕН"
-sendChatMessage(messagestart)
-
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/kigredns/guiformyfriend/refs/heads/main/redversion.lua')))()
 local Window = OrionLib:MakeWindow({Name = "RP script 2.0 special", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "by Aftr"})
 
